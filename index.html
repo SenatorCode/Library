@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Rounded">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="material-icons" style="color: #0066FF; font-size: 2rem;">library_books</span>
+                <h1>My Library</h1>
+            </div>
+            <button type="button" class="add-button"><span class="material-icons">add</span> Add New Book</button>
+        </div>
+        <div class="main-content">
+            <div class="info">
+                <div id="total-books" class="info-card">Total Books <span id="books-num"></span></div>
+                <div id="read" class="info-card">Read <span id="read-num"></span></div>
+                <div id="unread" class="info-card">Unread <span id="unread-num"></span></div>
+            </div>
+            <div class="cards">
+            </div>
+        </div>
+    </div>
+    <dialog id="bookModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Add New Book</h2>
+            <button class="close-button" type="button" aria-label="Close modal">
+              <span class="material-icons">close</span>
+            </button>
+          </div>
+      
+          <form id="bookForm">
+                <div class="form-group">
+                <label for="bookTitle">Book Title</label>
+                <input 
+                    type="text" 
+                    id="bookTitle" 
+                    name="title" 
+                    placeholder="e.g., The Great Gatsby"
+                    required
+                >
+                </div>
+        
+                <div class="form-group">
+                <label for="bookAuthor">Author</label>
+                <input 
+                    type="text" 
+                    id="bookAuthor" 
+                    name="author" 
+                    placeholder="e.g., F. Scott Fitzgerald"
+                    required
+                >
+                </div>
+        
+                <div class="form-group">
+                <label for="bookPages">Number of Pages</label>
+                <input 
+                    type="number" 
+                    id="bookPages" 
+                    name="pages" 
+                    placeholder="0"
+                    required
+                    min="1"
+                >
+                </div>
+        
+                <div class="form-group toggle-group">
+                <label for="readToggle">Read Status</label>
+                <button 
+                    class="toggle-switch" 
+                    type="button" 
+                    id="readToggle" 
+                    aria-label="Mark as read"
+                ></button>
+                </div>
+        
+                <div class="modal-buttons">
+                <button class="modal-button cancel" type="button" id="cancelBtn">
+                    Cancel
+                </button>
+                <button class="modal-button submit" type="submit">
+                    <span class="material-icons" style="font-size: 1.2rem;">add</span> Add to Collection
+                </button>
+                </div>
+          </form>
+        </div>
+      </dialog>
+</body>
+<script src="./script.js" defer></script>
+</html>
