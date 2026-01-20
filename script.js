@@ -4,30 +4,35 @@ const myLibrary = [
     author: "George Orwell",
     numPages: 328,
     read: false,
+    id: crypto.randomUUID()
   },
   {
     title: "To Kill a Mockingbird",
     author: "Harper Lee",
     numPages: 281,
     read: true,
+    id: crypto.randomUUID()
   }, 
   {
     title: "The Great Gatsby",
     author: "F. Scott Fitzgerald",
     numPages: 180,
     read: false,
+    id: crypto.randomUUID()
   },
   {
     title: "The Hobbit",
     author: "J.R.R. Tolkien",
     numPages: 310,
     read: true,
+    id: crypto.randomUUID()
   },
   {
     title: "Brave New World",
     author: "Aldous Huxley",
     numPages: 268,
     read: false,
+    id: crypto.randomUUID()
   },
 ];
 const addBook = document.querySelector(".add-button");
