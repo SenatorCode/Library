@@ -148,7 +148,7 @@ function displayBooks() {
       `;
       
       // Insert the HTML into the container
-      cardsContainer.insertAdjacentHTML('beforeend', cardHTML);
+      cardsContainer.insertAdjacentHTML('afterbegin', cardHTML);
     });
 }
 const cardsContainer = document.querySelector(".cards");
